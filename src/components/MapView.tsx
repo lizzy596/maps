@@ -1171,6 +1171,16 @@ class MapView extends NativeBridgeComponent(
       }
     }
 
+     // New Lines start here
+     if (mapView == null) {
+      mapView = (
+        <RNMBXMapView {...props} {...callbacks}>
+          {this.props.children}
+        </RNMBXMapView>
+      )
+    }
+    // New Lines end here
+
     return (
       <View
         onLayout={this._onLayout}
